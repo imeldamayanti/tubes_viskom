@@ -8,13 +8,13 @@ import base64
 
 st.set_page_config(page_title="He", page_icon="📱")
 
-st.title("Kalkulator Aritmatika dengan Deteksi Gesture ✌")
+st.title("Arithmetic Calculator with Gesture Detection ✌")
 st.write(
-    """Arahkan tangan ke kamera sesuai simbol angka dan operator, lalu sistem akan otomatis mendeteksi gesture tersebut dan menampilkan hasil perhitungannya secara real-time."""
+    """Move your hand in front of the camera according to the number and operator gestures. The system will automatically detect them and display the calculation result in real time."""
 )
 
 current_dir = os.path.dirname(__file__)
-model_path = os.path.join(current_dir, "best_18mei.pt")
+model_path = os.path.join(current_dir, "best_3jun.pt")
 
 model = YOLO(model_path)
 
@@ -29,7 +29,7 @@ label_map = {
 # Setup UI
 
 
-run = st.checkbox("📸 Mulai Kamera")
+run = st.checkbox("📸 Start Camera")
 
 # Inisialisasi session_state
 if 'expression' not in st.session_state:
@@ -101,12 +101,12 @@ if run:
             last_capture_time = current_time
 
         # Update UI
-        expr_placeholder.markdown(f"**Ekspresi:** `{st.session_state.expression}`")
+        expr_placeholder.markdown(f"**Expression:** `{st.session_state.expression}`")
         if st.session_state.result != "":
             result_placeholder.markdown(f"### ✅ Hasil: `{st.session_state.result}`")
 
         with history_placeholder:
-            st.markdown("### 🧾 Riwayat Perhitungan")
+            st.markdown("### 🧾 Calculation History")
             for h in st.session_state.history:
                 st.markdown(f"- `{h}`")
 

@@ -32,12 +32,12 @@ with st.container():
     st.write("-----")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.title("Selamat Datang")
+        st.title("Welcome!")
         st.write("""
-                Ini adalah website Kalkulator Aritmatika dengan Deteksi Gesture, dibuat sebagai pemenuhan tugas besar mata kuliah Visi Komputer.
-                
-                Di sini, kamu bisa menghitung operasi aritmatika secara otomatis hanya dengan melakukan gesture tangan American Sign Language.
-                > Di bagian kiri, klik Calculator
+            This is an Arithmetic Calculator Website with Gesture Detection, developed as a technological innovation combining artificial intelligence and sign language.
+           
+            Here, you can perform arithmetic operations automatically just by using American Sign Language (ASL) hand gestures.
+            > On the left side, click Calculator.
                 """)
 
     with right_column:
