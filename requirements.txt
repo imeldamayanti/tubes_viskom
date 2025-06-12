@@ -1,0 +1,7 @@
+streamlit
+streamlit-lottie
+streamlit-extras
+requests
+opencv-python
+numpy
+ultralytics
